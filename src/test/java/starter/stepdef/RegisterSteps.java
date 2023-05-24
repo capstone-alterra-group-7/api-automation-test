@@ -1,3 +1,5 @@
+package starter.stepdef;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -27,5 +29,17 @@ public class RegisterSteps {
     @And("i receive valid data for new account")
     public void iReceiveValidDataForNewAccount() {
         register.validateDataNewAccount();
+    }
+
+    @When("user send request with existing email")
+    public void userSendRequestWithExistingEmail() { register.sendReqWithExistingEmail();
+    }
+
+    @Then("user see status code {int}")
+    public void userSeeStatusCode(int arg0) { register.seeErrorCode();
+    }
+
+    @And("i receive valid error message")
+    public void iReceiveValidErrorMessage() { register.validateMessageError();
     }
 }
