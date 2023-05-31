@@ -8,6 +8,7 @@ import net.thucydides.core.annotations.Steps;
 import starter.pages.GetCredentialPage;
 
 public class GetCredentialsSteps {
+
     @Steps
     GetCredentialPage getCredential;
     @Given("user has valid endpoint auth login")

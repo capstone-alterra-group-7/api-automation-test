@@ -31,7 +31,7 @@ public class GetCredentialPage {
 
     public String endpointCredential = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/user";
     public String getEndpointGetCredential() {
-        return endpointCredential;
+        return endpointCredential; 
     }
 
 
@@ -44,7 +44,7 @@ public class GetCredentialPage {
     }
 
     public void validateMessageResponse() {
-        Response response = lastResponse();
+        Response response = SerenityRest.lastResponse();
         String email = response.getBody().jsonPath().get("data.email");
         Assert.assertEquals(email, "aulia@dummy.com");
     }

@@ -47,13 +47,11 @@ public class RegisterPage {
     public void validateDataNewAccount() {
         Response response = SerenityRest.lastResponse();
         String email = response.getBody().jsonPath().get("data.email");
-        Assert.assertEquals(email, "auliadummy2@gmail.com");
-    }
-
-    /* ============================================ TEST CASE EXISTING EMAIL ========================================== */
-
-    public void sendReqWithExistingEmail() {
-        String confirm_password = "aulia123";
+        Assert.assertEquals(email, "auliadummy2@gmail.com");}
+    
+/* ============================================ TEST CASE EXISTING EMAIL ========================================== */    
+    
+    public void sendReqWithExistingEmail() { String confirm_password = "aulia123";
         String email = "auliadummy2@gmail.com";
         String full_name = "Aulia Claudia Rahma";
         String password = "aulia123";
