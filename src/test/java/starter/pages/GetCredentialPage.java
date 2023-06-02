@@ -13,7 +13,7 @@ public class GetCredentialPage {
     protected static String email="aulia@dummy.com";
     protected static String password="aulia1234";
     public String token ="";
-    public String endpointLogin = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/login";
+    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
     public String setEndpointAuthLogin() {
         return endpointLogin;
     }
@@ -29,7 +29,7 @@ public class GetCredentialPage {
         token = lastResponse().getBody().jsonPath().get("data.token");
     }
 
-    public String endpointCredential = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/user";
+    public String endpointCredential = "https://capstone.hanifz.com/api/v1/user";
     public String getEndpointGetCredential() {
         return endpointCredential; 
     }
