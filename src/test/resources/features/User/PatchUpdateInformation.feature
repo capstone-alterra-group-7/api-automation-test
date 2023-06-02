@@ -1,6 +1,6 @@
 Feature: As a user i want to update information account with method patch
 
-  @PatchUpdateInformation-validRequest
+  @TESTCASE-CATAPI49
   Scenario: as user i want to input valid endpoint so that i can update information account
     Given user has endpoint login
     When user send request for get token
@@ -9,7 +9,7 @@ Feature: As a user i want to update information account with method patch
     Then user can update information with status code 200
     And i can validate data with message response
 
-  @PatchUpdateInformation-invalidEndpoint
+  @TESTCASE-CATAPI50
   Scenario: as user i want to input invalid request so that i cannot update information account
     Given user set endpoint login
     When user send request to endpoint login for get token

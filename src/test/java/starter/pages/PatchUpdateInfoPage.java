@@ -13,7 +13,7 @@ public class PatchUpdateInfoPage {
     protected static String email="aulia@dummy.com";
     protected static String password="aulia1234";
     public String token ="";
-    public String EndpointLogin = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/login";
+    public String EndpointLogin = "https://capstone.hanifz.com/api/v1/login";
     public String setEndpointLogin() {
         return EndpointLogin;
     }
@@ -27,7 +27,7 @@ public class PatchUpdateInfoPage {
         SerenityRest.given().header("Content-Type", "application/json").body(reqBody.toString()).post(setEndpointLogin());
         token = lastResponse().getBody().jsonPath().get("data.token");
     }
-    public String endpointInfo = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/user/update-information";
+    public String endpointInfo = "https://capstone.hanifz.com/api/v1/user/update-information";
     public String setEndpointToUpdatInfo() {
         return endpointInfo;}
 
@@ -56,7 +56,7 @@ public class PatchUpdateInfoPage {
     /* ==================================== TEST CASE NEGATIF INVALID ENDPOINT ======================================================*/
     protected static String Email="aulia@dummy.com";
     protected static String Password="aulia1234";
-    public String loginEndpoint = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/login";
+    public String loginEndpoint = "https://capstone.hanifz.com/api/v1/login";
     public String setEndpointForLogin() {
         return loginEndpoint;
     }
@@ -72,7 +72,7 @@ public class PatchUpdateInfoPage {
         token = lastResponse().getBody().jsonPath().get("data.token");
     }
 
-    public String infoEndpoint = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/user/update-informations";
+    public String infoEndpoint = "https://capstone.hanifz.com/api/v1/user/update-informations";
     public String setEndpointForUpdate() {
         return infoEndpoint;
     }

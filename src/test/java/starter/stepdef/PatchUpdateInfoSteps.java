@@ -57,4 +57,5 @@ public class PatchUpdateInfoSteps {
     @And("i can see validate data with message response")
     public void iCanSeeValidateDataWithMessageResponse() { updateInfo.userSeeMessageResponse();
     }
+
 }
