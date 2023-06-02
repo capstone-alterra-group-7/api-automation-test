@@ -9,7 +9,7 @@ import org.junit.Assert;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class LoginPage {
-    public String endpoint = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/login";
+    public String endpoint = "https://capstone.hanifz.com/api/v1/login";
 
     @Step("I have endpoint post new login")
     public String setEndpointLogin() {
@@ -42,7 +42,7 @@ public class LoginPage {
         Assert.assertEquals(email, "aulia@dummy.com");}
 
 /* ========================================== TEST CASE INVALID ENDPOINT ================================================ */
-    public String invalidEndpoint = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v2/login-user";
+    public String invalidEndpoint = "https://capstone.hanifz.com/api/v1/login-user";
     public String setInvalidEndpointLogin() {
         return invalidEndpoint;
     }
