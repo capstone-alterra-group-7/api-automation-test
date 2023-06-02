@@ -9,7 +9,7 @@ import org.junit.Assert;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class RegisterPage {
-    public String endpoint = "http://ec2-3-26-30-178.ap-southeast-2.compute.amazonaws.com:8088/api/v1/register";
+    public String endpoint = "https://capstone.hanifz.com/api/v1/register";
 
     @Step("I have endpoint for create user")
     public String setEndpointRegister() {
