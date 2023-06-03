@@ -68,4 +68,66 @@ public class GetAllArticlePage {
         String message = response.getBody().jsonPath().get("message");
         Assert.assertEquals(message, "Not Found");
     }
+
+    /* ============================================= TEST CASE POSITIVE (GET ARTICLE BY ID) ============================== */
+
+    public String articleByID = "https://capstone.hanifz.com/api/v1/public/article";
+    public String setEndpointArticleByID() {
+        return articleByID + "/1";
+    }
+
+    public void sendReqToEndpointArticleByID() {
+        SerenityRest.given().header("Authorization", "Bearer " + token).get(setEndpointArticleByID());
+    }
+
+    public void validateStatusCodeArticleByID() {
+        restAssuredThat(response -> response.statusCode(200));
+    }
+
+    public void validateDataWithMessageResponse() {
+        Response response = SerenityRest.lastResponse();
+        String message = response.getBody().jsonPath().get("message");
+        Assert.assertEquals(message, "Successfully to get article by id");
+    }
+
+    /* ============================================= TEST CASE NEGATIVE (GET ARTICLE WITH INVALID ID) ============================== */
+    public String articleInvalidID = "https://capstone.hanifz.com/api/v1/public/article";
+    public String setEndpointArticleInvalidID() {
+        return articleInvalidID + "/999";
+    }
+
+    public void sendReqToEndpointArticleWithInvalidID() {
+        SerenityRest.given().header("Authorization", "Bearer " + token).get(setEndpointArticleInvalidID());
+    }
+
+    public void seeStatusCode() {
+        restAssuredThat(response -> response.statusCode(400));
+    }
+
+    public void validateErrorResponse() {
+        Response response = SerenityRest.lastResponse();
+        String message = response.getBody().jsonPath().get("message");
+        String errors = response.getBody().jsonPath().get("errors");
+        Assert.assertEquals(message, "Failed to get article by id");
+        Assert.assertEquals(errors, "record not found");
+    }
+
+    /* ============================================= TEST CASE NEGATIVE (GET ARTICLE WITH INVALID ENDPOINT) ============================== */
+    public String articleInvalidEndpointID = "https://capstone.hanifz.com/api/v1/public/articles";
+    public String setInvalidEndpointByID() {
+        return articleInvalidEndpointID + "/999";
+    }
+    public void sendReqToInvEndpointByID() {
+        SerenityRest.given().header("Authorization", "Bearer " + token).get(setInvalidEndpointByID());
+    }
+
+    public void statusCode() {
+        restAssuredThat(response -> response.statusCode(404));
+    }
+
+    public void seeErrorResponse() {
+        Response response = SerenityRest.lastResponse();
+        String message = response.getBody().jsonPath().get("message");
+        Assert.assertEquals(message, "Not Found");
+    }
 }
