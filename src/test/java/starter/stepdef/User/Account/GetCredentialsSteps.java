@@ -1,11 +1,11 @@
-package starter.stepdef;
+package starter.stepdef.User.Account;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.GetCredentialPage;
+import starter.pages.User.Account.GetCredentialPage;
 
 public class GetCredentialsSteps {
 

@@ -1,11 +1,11 @@
-package starter.stepdef;
+package starter.stepdef.User.Account;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.RegisterPage;
+import starter.pages.User.Account.RegisterPage;
 
 public class RegisterSteps {
     @Steps
