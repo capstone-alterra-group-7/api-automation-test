@@ -1,4 +1,4 @@
-package starter.pages;
+package starter.pages.User.Account;
 
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
@@ -12,9 +12,10 @@ public class PutUpdatePasswordPage {
     protected static String email="aulia_updatepw@dummy.com";
     protected static String password="aulia1234";
     public String token ="";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
+
+    public String login = "https://capstone.hanifz.com/api/v1/login";
     public String setEndpointLoginUser() {
-        return endpointLogin;
+        return login;
     }
 
     public void sendReqToEndpointLoginuser() {
@@ -27,10 +28,9 @@ public class PutUpdatePasswordPage {
         SerenityRest.given().header("Content-Type", "application/json").body(reqBody.toString()).post(setEndpointLoginUser());
         token = lastResponse().getBody().jsonPath().get("data.token");
     }
-
-    public String endpointUpdatePassword = "https://capstone.hanifz.com/api/v1/user/update-password";
+    public String updatePassword = "https://capstone.hanifz.com/api/v1/user/update-password";
     public String setEndpointForUpdatePassword() {
-        return endpointUpdatePassword;
+        return updatePassword;
     }
 
     public void sendEndpointForUpdatePassword() {

@@ -1,4 +1,4 @@
-package starter.pages;
+package starter.pages.User.Account;
 
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
