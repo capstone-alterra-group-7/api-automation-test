@@ -45,16 +45,16 @@ public class PutUpdatePasswordPage {
                 "}";
         JSONObject reqBody = new JSONObject(body);
 
-        SerenityRest.given().header("Authorization", "Bearer " + token).put(setEndpointForUpdatePassword());
+        SerenityRest.given().header("Authorization", "Bearer " + token).header("Content-Type", "application/json").body(reqBody.toString()).put(setEndpointForUpdatePassword());
     }
 
     public void seeStatusCodeForUpdatePassword() {
-        restAssuredThat(response -> response.statusCode(400));
+        restAssuredThat(response -> response.statusCode(200));
     }
 
     public void validateMessageForUpdatePassword() {
         Response response = SerenityRest.lastResponse();
         String message = response.getBody().jsonPath().get("message");
-        Assert.assertEquals(message, "Failed to update password");
+        Assert.assertEquals(message, "Successfully updated password");
     }
 }

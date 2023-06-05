@@ -59,7 +59,7 @@ public class PostCreateArticlePage {
         String description = response.getBody().jsonPath().get("description");
         Assert.assertEquals(description, "artikel aulia");
     }
-    
+
     /* ======================================= TEST NEGATIVE (WITHOUT AUTH) =============================== */
     public String articleEndpoint = "https://capstone.hanifz.com/api/v1/admin/article";
     public String setEndpointNewArticle() {
