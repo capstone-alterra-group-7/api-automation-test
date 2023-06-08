@@ -1,4 +1,4 @@
-package starter.pages;
+package starter.pages.Admin.Station;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;

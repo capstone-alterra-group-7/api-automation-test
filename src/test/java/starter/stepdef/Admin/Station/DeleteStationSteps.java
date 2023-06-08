@@ -1,11 +1,11 @@
-package starter.stepdef;
+package starter.stepdef.Admin.Station;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.DeleteStation;
+import starter.pages.Admin.Station.DeleteStation;
 
 public class DeleteStationSteps {
 
@@ -38,7 +38,5 @@ public class DeleteStationSteps {
     public void adminReceiveValidDeleteResponseCode(int arg0) {
         deleteStation.validateHTTPResponseCode200ForDeleteStation();
     }
-
-
 
 }

@@ -1,10 +1,10 @@
-package starter.stepdef.traincarriage;
+package starter.stepdef.Admin.TrainCarriage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.traincarriage.CreateANewTrainCarriagePage;
+import starter.pages.Admin.TrainCarriage.CreateANewTrainCarriagePage;
 
 public class CreateANewTrainCarriageSteps {
 

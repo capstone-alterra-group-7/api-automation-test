@@ -1,11 +1,11 @@
-package starter.stepdef;
+package starter.stepdef.Admin.Station;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.POST_CREATENEWSTATION;
+import starter.pages.Admin.Station.POST_CREATENEWSTATION;
 
 public class POST_CREATENEWSTATION_STEPS {
 

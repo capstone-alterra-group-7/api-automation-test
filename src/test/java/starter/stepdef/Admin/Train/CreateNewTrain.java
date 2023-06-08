@@ -1,10 +1,10 @@
-package starter.stepdef;
+package starter.stepdef.Admin.Train;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.CreateNewTrainPost;
+import starter.pages.Admin.Train.CreateNewTrainPost;
 
 
 public class CreateNewTrain {
