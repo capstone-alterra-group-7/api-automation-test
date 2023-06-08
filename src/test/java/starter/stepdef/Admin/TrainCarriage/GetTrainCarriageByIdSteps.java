@@ -1,10 +1,10 @@
-package starter.stepdef.traincarriage;
+package starter.stepdef.Admin.TrainCarriage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.traincarriage.GetTrainCarriageByIdPage;
+import starter.pages.Admin.TrainCarriage.GetTrainCarriageByIdPage;
 
 public class GetTrainCarriageByIdSteps {
 

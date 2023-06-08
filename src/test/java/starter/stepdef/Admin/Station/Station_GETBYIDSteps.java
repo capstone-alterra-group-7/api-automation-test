@@ -1,11 +1,11 @@
-package starter.stepdef;
+package starter.stepdef.Admin.Station;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.pages.Station_GETBYID;
+import starter.pages.Admin.Station.Station_GETBYID;
 
 public class Station_GETBYIDSteps {
 
