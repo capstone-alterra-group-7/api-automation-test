@@ -1,4 +1,4 @@
-package starter.pages.User.HistorySearch.;
+package starter.pages.User.HistorySearch;
 
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
