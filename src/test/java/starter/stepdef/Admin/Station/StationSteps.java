@@ -11,10 +11,6 @@ public class StationSteps {
 
     @Steps
     Station station;
-
-
-
-
     @Given("I set GET api endpoints")
     public void ISetGetApiEndpoints() {
       station.setEndpointLogin();
@@ -31,8 +27,8 @@ public class StationSteps {
         station.setPostValidEndpointForGetAllStation();
     }
 
-    @And("user send GET HTTP request with valid endpoint")
-    public void UserSendGetHttpRequestWithValidEndpoint() {
+    @And("user send HTTP request with valid endpoint")
+    public void UserSendHttpRequestWithValidEndpoint() {
         station.sendPOSTHTTPRequestForGetAllStation();
     }
 
