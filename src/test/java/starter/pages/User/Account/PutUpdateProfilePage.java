@@ -9,8 +9,8 @@ import static net.serenitybdd.rest.SerenityRest.lastResponse;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 public class PutUpdateProfilePage {
-    protected static String email="aulia_updatepw@dummy.com";
-    protected static String password="aulia1234";
+    protected static String email="newuser2@gmail.com";
+    protected static String password="newuser2";
     public String token ="";
 
     public String login = "https://capstone.hanifz.com/api/v1/login";

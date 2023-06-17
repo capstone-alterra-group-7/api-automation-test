@@ -33,7 +33,11 @@ public class AdminArticle {
                 "}";
         JSONObject reqBody = new JSONObject(body);
 
-        SerenityRest.given().header("Authorization", "Bearer " + token).contentType("application/json").body(reqBody.toString()).post(PutApiArticle());
+        SerenityRest.given()
+                .header("Authorization", "Bearer " + token)
+                .contentType("application/json")
+                .body(reqBody.toString())
+                .post(PutApiArticle());
         token = lastResponse().getBody().jsonPath().get("data.token");
 
 
@@ -49,8 +53,6 @@ public class AdminArticle {
         Article.put("title", "jpg");
 
         SerenityRest.given().header("Authorization", "Bearer " + token).contentType("application/json").header("Content-Type", "application/json").body(Article.toString()).when().put(EndpointPostArticle);
-
-
     }
 
 
