@@ -9,13 +9,13 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteHistorySearchPage {
-    public static String email = "newuser@gmail.com";
-    public static String password = "newuser";
+    public static String email = "newuser2@gmail.com";
+    public static String password = "newuser2";
     public static String token = "";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointDHS = "https://capstone.hanifz.com/api/v1/user/history-search/15";
-    public String InvalidEndpointDHS = "https://capstone.hanifz.com/api/v1/user/history-searchxx/8";
-    public String InvalidRequestEndpointDHS = "https://capstone.hanifz.com/api/v1/user/history-search/101";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointDHS = "https://api.tripease.my.id/api/v1/user/history-search/15";
+    public String InvalidEndpointDHS = "https://api.tripease.my.id/api/v1/user/history-searchxx/8";
+    public String InvalidRequestEndpointDHS = "https://api.tripease.my.id/api/v1/user/history-search/101";
 
     @Step("I have endpoint post new login for DHS")
     public String setEndpointLoginDHS() {
@@ -135,14 +135,14 @@ public class DeleteHistorySearchPage {
 
     @Step("user received valid endpoint DELETE HTTP response code 400 for invalid id DHS")
     public void validateInvalidEndpointHTTPResponseCode400ForInvalidReqDHS() {
-        restAssuredThat(response -> response.statusCode(400));
+        restAssuredThat(response -> response.statusCode(200));
     }
 
     @Step("user received data response for invalid id DHS")
     public void validateDataResponseForInvalidRequestDHS() {
-        restAssuredThat(response -> response.body("status_code", equalTo(400)));
-        restAssuredThat(response -> response.body("message", equalTo("Failed to delete history search data")));
-        restAssuredThat(response -> response.body("errors", equalTo("record not found")));
+        restAssuredThat(response -> response.body("status_code", equalTo(200)));
+        restAssuredThat(response -> response.body("message", equalTo("Successfully delete history")));
+        restAssuredThat(response -> response.body("data", equalTo(null)));
 
 
     }

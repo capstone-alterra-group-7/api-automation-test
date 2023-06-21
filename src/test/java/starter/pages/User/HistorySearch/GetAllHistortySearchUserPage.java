@@ -9,12 +9,12 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class GetAllHistortySearchUserPage {
-    public static String email = "newuser@gmail.com";
-    public static String password = "newuser";
+    public static String email = "newuser2@gmail.com";
+    public static String password = "newuser2";
     public static String token = "";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointGetAllHistorySearch = "https://capstone.hanifz.com/api/v1/user/history-search";
-    public String InvalidEndpointGetAllHistorySearch = "https://capstone.hanifz.com/api/v1/user/history-searchxx";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointGetAllHistorySearch = "https://api.tripease.my.id/api/v1/user/history-search";
+    public String InvalidEndpointGetAllHistorySearch = "https://api.tripease.my.id/api/v1/user/history-searchxx";
 
 
     @Step("I have endpoint post new login for get all history search")

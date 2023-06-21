@@ -11,9 +11,9 @@ public class GetTrainCarriageByIdPage {
     public static String email="admin@gmail.com";
     public static String password="z";
     public static String token ="";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointGTC = "https://capstone.hanifz.com/api/v1/public/train-carriage/3";
-    public String InvalidEndpointGTC = "https://capstone.hanifz.com/api/v1/public/train-carriagexx/68";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointGTC = "https://api.tripease.my.id/api/v1/public/train-carriage/3";
+    public String InvalidEndpointGTC = "https://api.tripease.my.id/api/v1/public/train-carriagexx/68";
 
 
         @Step("I have endpoint post new login for GTC")
