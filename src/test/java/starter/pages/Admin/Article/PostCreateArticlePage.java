@@ -25,7 +25,7 @@ public class PostCreateArticlePage {
         JSONObject reqBody = new JSONObject(body);
 
         SerenityRest.given().header("Content-Type", "application/json").body(reqBody.toString()).post(setEndpointAuth());
-        token = lastResponse().getBody().jsonPath().get("data.token");
+        token = lastResponse().getBody().jsonPath().get("data");
     }
 
     public String article = "https://capstone.hanifz.com/api/v1/admin/article";
