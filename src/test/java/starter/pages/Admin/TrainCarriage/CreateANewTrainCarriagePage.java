@@ -12,9 +12,9 @@ public class CreateANewTrainCarriagePage {
     public static String email = "admin@gmail.com";
     public static String password = "qweqwe123";
     public static String token = "";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointTC = "https://capstone.hanifz.com/api/v1/admin/train-carriage";
-    public String InvalidEndpointTC = "https://capstone.hanifz.com/api/v1/admin/train-carriagexx";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointTC = "https://api.tripease.my.id/api/v1/admin/train-carriage";
+    public String InvalidEndpointTC = "https://api.tripease.my.id/api/v1/admin/train-carriagexx";
 
 
     @Step("Enter Endpoint Login Valid Endpoint TC")

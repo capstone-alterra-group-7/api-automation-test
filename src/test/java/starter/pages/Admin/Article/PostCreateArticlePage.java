@@ -47,7 +47,7 @@ public class PostCreateArticlePage {
                 "}";
         JSONObject reqBody = new JSONObject(body);
 
-        SerenityRest.given().header("Content-Type", "application/json").body(reqBody.toString()).post(setEndpointArticle());
+        SerenityRest.given().header("Content-Type", "Bearer " + token).body(reqBody.toString()).post(setEndpointArticle());
     }
 
     public void getStatusCodeSuccessCreate() {

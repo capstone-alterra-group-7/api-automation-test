@@ -12,9 +12,9 @@ public class GetTicketOrderUserByIdPage {
     public static String email = "admin@gmail.com";
     public static String password = "qweqwe123";
     public static String token = "";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointGetTicketOrderUserByIdPage = "https://capstone.hanifz.com/api/v1/admin/order/ticket/detail";
-    public String InvalidEndpointGetTicketOrderUserByIdPage = "https://capstone.hanifz.com/api/v1/admin/order/ticketxx/detail";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointGetTicketOrderUserByIdPage = "https://api.tripease.my.id/api/v1/admin/order/ticket/detail";
+    public String InvalidEndpointGetTicketOrderUserByIdPage = "https://api.tripease.my.id/api/v1/admin/order/ticketxx/detail";
 
     ////////////////////////////////////////==============PARAMS========================///////////////////////////////
 //              YOU CAN SET YOUR OWN PARAMS UNDER HERE

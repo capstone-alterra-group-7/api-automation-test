@@ -11,10 +11,10 @@ public class DeleteTrainCarriageByIdPage {
     public static String email="admin@gmail.com";
     public static String password="z";
     public static String token ="";
-    public String endpointLogin = "https://capstone.hanifz.com/api/v1/login";
-    public String ValidEndpointDTC = "https://capstone.hanifz.com/api/v1/admin/train-carriage/8";
-    public String InvalidEndpointDTC = "https://capstone.hanifz.com/api/v1/admin/train-carriagexx/8";
-    public String InvalidRequestEndpointGTC = "https://capstone.hanifz.com/api/v1/admin/train-carriagexx/101";
+    public String endpointLogin = "https://api.tripease.my.id/api/v1/login";
+    public String ValidEndpointDTC = "https://api.tripease.my.id/api/v1/admin/train-carriage/8";
+    public String InvalidEndpointDTC = "https://api.tripease.my.id/api/v1/admin/train-carriagexx/8";
+    public String InvalidRequestEndpointGTC = "https://api.tripease.my.id/api/v1/admin/train-carriagexx/101";
 
         @Step("I have endpoint post new login for GTC")
         public String setEndpointLoginDTC() {
